@@ -1,0 +1,14 @@
+Postgres cronjob setup documentation
+
+1. Keys need to be generated or imported by gpg for encryption/decryption of db dump
+gpg --full-generate-key
+OR
+gpg --import my-key.key
+
+2. App folder
+- backup.sh contains the script that initiates pg_dump which is compressed (gzip) and encrypted (gpg) before outputted in the backup folder
+- contab.txt meant to simulate what to put into the actual /etc/crontab, script will run every day 1 minute after midnight
+
+Else:
+- backup.sh can be executed via terminal to perform a manual db dumb right away
+- backup.sql.gz last modification can be check using ls -la OR stat

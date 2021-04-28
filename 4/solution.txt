@@ -1,0 +1,39 @@
+1. what a reverse proxy is
+- a type of proxy server that typically sits behind the firewall in a private network 
+- directs client requests to the appropriate backend server
+- ensure the smooth flow of network traffic between clients and servers
+
+Commonly used for:
+- load balancing: distributing client requests across a group of servers maximizing speed and capacity while ensuring no one server is overloaded
+- web acceleration: compress inbound and outbound data, as well as cache commonly requested content, speeding up the flow of traffic between clients and servers
+- security and anonymity: intercepting requests headed for your backend servers acting as an additional defense against security attacks
+
+2. what types of reverse proxies there are
+
+Not sure about the question, if its regarding common usage of reverse proxy servers, see 1.
+If it is regarding the kind of proxy servers: NGINX, Apache, that I know of and used.
+
+3. analyze and compare Nginx and Traefik
+Nginx:
+Open-source web server and also used as a reverse proxy.
+
+Additional features:
+- Reverse proxy with caching
+- IPv6
+- Load balancing
+- FastCGI support with caching
+- WebSockets
+- Handling of static files, index files, and auto-indexing
+- TLS/SSL with SNI
+
+Traefik:
+Traefik is an Edge Router, it intercepts and routes every incoming request and 
+knows all the logic and every rule that determine which services handle which requests.
+
+Additional features:
+- uses service discovery to configure itself dynamically from the services themselves
+- all major protocols are supported and can be flexibly managed with a rich set of configurable middlewares
+
+Compare:
+- Traefik is a dynamic load balancer designed for ease of configuration, especially in dynamic environments.
+- Nginx is one of the most popular web server among high-traffic websites. As of August 2018, it serves 25.03% of traffic of the top 1 million websites.

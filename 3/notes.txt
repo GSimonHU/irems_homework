@@ -1,0 +1,9 @@
+1. Gitlab connects to an external PostgreSQL server:
+- Could not fully finnish this task
+- Configured gitlab.rb to connect to postgres running in docker compose, but could not manage to connect and seed the DB
+
+2. Gitlab uses the /var/data/gitlab directory of the host OS to store all data
+- See docker-compose.yml
+
+3. all custom config files are part of the image
+- See ./image/Dockerfile
